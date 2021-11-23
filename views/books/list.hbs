@@ -1,0 +1,17 @@
+<h1>Listado de libros</h1>
+
+<a href="/books/create">Crear libro</a>
+
+<ul>
+{{#each data}}
+	
+	<li>{{this.title}}</li>
+	<a href="/books/{{this._id}}">Ver detalles</a>
+    <a href="/books/{{this._id}}/edit">Editar</a>
+    {{!botón de borrado se ancla a una fórmula}}
+    <form method="POST" action="/books/{{this._id}}/delete">
+        <button>Borrar</button>
+    </form>
+
+{{/each}}
+</ul>
