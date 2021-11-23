@@ -12,7 +12,7 @@ require("dotenv").config()
 // 2. Middlewares
 
 app. set("views", __dirname + "/views")
-app.set("view engine", "Hbs")
+app.set("view engine", "hbs")
 
 hbs.registerPartials(__dirname + "/views/partials")
 
